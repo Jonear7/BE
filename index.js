@@ -4,6 +4,7 @@ const { ApolloServer } = require('apollo-server');
 const { sequelize } = require('./models/Employee');
 const employeeTypeDefs = require('./typeDefs/employeeTypeDefs');
 const employeeResolvers = require('./resolvers/employeeResolvers');
+const port = process.env.PORT || 4000;
 
 const server = new ApolloServer({
   typeDefs: employeeTypeDefs,
