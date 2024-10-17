@@ -11,7 +11,7 @@ const server = new ApolloServer({
 });
 
 sequelize.sync().then(() => {
-  server.listen({ port: 4000 }).then(({ url }) => {
+  server.listen({ port: 4001 }).then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`);
   });
 }).catch(error => console.error('Unable to connect to the database:', error));
