@@ -9,9 +9,8 @@ const port = process.env.PORT || 4000;
 const server = new ApolloServer({
   typeDefs: employeeTypeDefs,
   resolvers: employeeResolvers,
-  persistedQueries:{
-    cache: 'bounded',
-  }
+  introspection: true,
+  playground: true, 
 });
 
 sequelize.sync().then(() => {
